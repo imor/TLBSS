@@ -25,12 +25,16 @@ a1Done = Semaphore(0)
 b1Done = Semaphore(0)
 
 def threadA():
+    global a1Done
+    global b1Done
     print "a1"
     a1Done.signal()
     b1Done.wait()
     print "a2"
 
 def threadB():
+    global a1Done
+    global b1Done
     print "b1"
     b1Done.signal()
     a1Done.wait()
