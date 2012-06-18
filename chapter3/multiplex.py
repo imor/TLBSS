@@ -21,5 +21,5 @@ def increment():
     sleep(1)
     count = count + 1
     multiplex.signal()
-    
+
 [Thread(increment) for x in range(no_of_threads)]

@@ -23,5 +23,5 @@ def increment():
     count = count + 1
     mutex.signal()
     print count
-    
+
 [Thread(increment) for x in range(no_of_threads)]
