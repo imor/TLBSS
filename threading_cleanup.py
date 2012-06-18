@@ -37,18 +37,17 @@ class Semaphore(threading._Semaphore):
     def value(self):
         return self._Semaphore__value
     
-if os.name == 'posix':
-    def watcher():
-        child = os.fork()
-        if child == 0: return
-        try:
-            os.wait()
-        except KeyboardInterrupt:
-            print 'KeyBoardInterrupt'
-            try:
-                os.kill(child, signal.SIGKILL)
-            except OSError:
-                pass
-        sys.exit()
-
-    watcher()
+#if os.name == 'posix':
+#    def watcher():
+#        child = os.fork()
+#        if child == 0: return
+#        try:
+#            os.wait()
+#        except KeyboardInterrupt:
+#            print 'KeyBoardInterrupt'
+#            try:
+#                os.kill(child, signal.SIGKILL)
+#            except OSError:
+#                pass
+#        sys.exit()
+#    watcher()

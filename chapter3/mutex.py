@@ -1,3 +1,4 @@
+#!/usr/local/bin/python
 '''
 Add semaphores to the following example to enforce mutual exclusion
 to the shared variable count.

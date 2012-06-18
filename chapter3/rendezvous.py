@@ -1,3 +1,4 @@
+#!/usr/local/bin/python
 '''
 Generalize the signal pattern so that it works both ways. Thread A has
 to wait for Thread B and vice versa. In other words, given this code
