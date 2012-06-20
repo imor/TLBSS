@@ -20,7 +20,7 @@ def func(name):
     global barrier1
     global barrier2
 
-    for i in range(times_to_loop):
+    for i in xrange(times_to_loop):
        print name + ' before barrier1'
        mutex.wait()
        number_of_threads_waiting += 1
@@ -39,4 +39,4 @@ def func(name):
 
        barrier2.wait()
 
-[Thread(func, str(x)) for x in range(number_of_threads)]
+[Thread(func, str(x)) for x in xrange(number_of_threads)]

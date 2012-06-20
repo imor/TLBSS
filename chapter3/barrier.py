@@ -29,4 +29,4 @@ def func(name):
     barrier.wait()
     print name + ' after barrier'
 
-[Thread(func, str(x)) for x in range(total_no_of_threads)]
+[Thread(func, str(x)) for x in xrange(total_no_of_threads)]
